@@ -3,34 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NigerBonCoin - Petites Annonces au Niger</title>
-    <meta name="description" content="Le site de petites annonces numéro 1 au Niger. Achetez et vendez facilement près de chez vous.">
+    <title>🌍 AfricaBonCoin - Petites Annonces pour toute l'Afrique</title>
+    <meta name="description" content="La plateforme de petites annonces numéro 1 en Afrique. Achetez et vendez facilement dans tous les pays africains.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header avec motifs africains -->
     <header class="header">
+        <div class="african-border-top"></div>
         <nav class="nav">
             <div class="nav-brand">
-                <h1 class="logo">🇳🇪 NigerBonCoin</h1>
-                <span class="tagline">Petites annonces au Niger</span>
+                <h1 class="logo">🌍 AfricaBonCoin</h1>
+                <span class="tagline">Petites annonces pour toute l'Afrique</span>
             </div>
             
             <div class="nav-search">
                 <input type="text" placeholder="Que recherchez-vous ?" class="search-input" id="searchInput">
-                <select class="location-select" id="locationSelect">
-                    <option value="">Toutes les régions</option>
-                    <option value="niamey">Niamey</option>
-                    <option value="zinder">Zinder</option>
-                    <option value="maradi">Maradi</option>
-                    <option value="tahoua">Tahoua</option>
-                    <option value="agadez">Agadez</option>
-                    <option value="dosso">Dosso</option>
-                    <option value="tillaberi">Tillabéri</option>
-                    <option value="diffa">Diffa</option>
+                <select class="location-select" id="countrySelect">
+                    <option value="">Tous les pays</option>
+                    <optgroup label="Afrique du Nord">
+                        <option value="algerie">🇩🇿 Algérie</option>
+                        <option value="egypte">🇪🇬 Égypte</option>
+                        <option value="libye">🇱🇾 Libye</option>
+                        <option value="maroc">🇲🇦 Maroc</option>
+                        <option value="soudan">🇸🇩 Soudan</option>
+                        <option value="tunisie">🇹🇳 Tunisie</option>
+                    </optgroup>
+                    <optgroup label="Afrique de l'Ouest">
+                        <option value="benin">🇧🇯 Bénin</option>
+                        <option value="burkina-faso">🇧🇫 Burkina Faso</option>
+                        <option value="cap-vert">🇨🇻 Cap-Vert</option>
+                        <option value="cote-ivoire">🇨🇮 Côte d'Ivoire</option>
+                        <option value="gambie">🇬🇲 Gambie</option>
+                        <option value="ghana">🇬🇭 Ghana</option>
+                        <option value="guinee">🇬🇳 Guinée</option>
+                        <option value="guinee-bissau">🇬🇼 Guinée-Bissau</option>
+                        <option value="liberia">🇱🇷 Libéria</option>
+                        <option value="mali">🇲🇱 Mali</option>
+                        <option value="mauritanie">🇲🇷 Mauritanie</option>
+                        <option value="niger">🇳🇪 Niger</option>
+                        <option value="nigeria">🇳🇬 Nigeria</option>
+                        <option value="senegal">🇸🇳 Sénégal</option>
+                        <option value="sierra-leone">🇸🇱 Sierra Leone</option>
+                        <option value="togo">🇹🇬 Togo</option>
+                    </optgroup>
+                    <optgroup label="Afrique Centrale">
+                        <option value="cameroun">🇨🇲 Cameroun</option>
+                        <option value="centrafrique">🇨🇫 Centrafrique</option>
+                        <option value="congo">🇨🇬 Congo</option>
+                        <option value="congo-rdc">🇨🇩 Congo RDC</option>
+                        <option value="gabon">🇬🇦 Gabon</option>
+                        <option value="guinee-equatoriale">🇬🇶 Guinée équatoriale</option>
+                        <option value="sao-tome">🇸🇹 São Tomé-et-Príncipe</option>
+                        <option value="tchad">🇹🇩 Tchad</option>
+                    </optgroup>
+                    <optgroup label="Afrique de l'Est">
+                        <option value="burundi">🇧🇮 Burundi</option>
+                        <option value="comores">🇰🇲 Comores</option>
+                        <option value="djibouti">🇩🇯 Djibouti</option>
+                        <option value="erythree">🇪🇷 Érythrée</option>
+                        <option value="ethiopie">🇪🇹 Éthiopie</option>
+                        <option value="kenya">🇰🇪 Kenya</option>
+                        <option value="madagascar">🇲🇬 Madagascar</option>
+                        <option value="malawi">🇲🇼 Malawi</option>
+                        <option value="maurice">🇲🇺 Maurice</option>
+                        <option value="mozambique">🇲🇿 Mozambique</option>
+                        <option value="ouganda">🇺🇬 Ouganda</option>
+                        <option value="rwanda">🇷🇼 Rwanda</option>
+                        <option value="seychelles">🇸🇨 Seychelles</option>
+                        <option value="somalie">🇸🇴 Somalie</option>
+                        <option value="soudan-sud">🇸🇸 Soudan du Sud</option>
+                        <option value="tanzanie">🇹🇿 Tanzanie</option>
+                        <option value="zambie">🇿🇲 Zambie</option>
+                        <option value="zimbabwe">🇿🇼 Zimbabwe</option>
+                    </optgroup>
+                    <optgroup label="Afrique Australe">
+                        <option value="afrique-sud">🇿🇦 Afrique du Sud</option>
+                        <option value="angola">🇦🇴 Angola</option>
+                        <option value="botswana">🇧🇼 Botswana</option>
+                        <option value="eswatini">🇸🇿 Eswatini</option>
+                        <option value="lesotho">🇱🇸 Lesotho</option>
+                        <option value="namibie">🇳🇦 Namibie</option>
+                    </optgroup>
+                </select>
+                <select class="city-select" id="citySelect">
+                    <option value="">Toutes les villes</option>
                 </select>
                 <button class="search-btn" onclick="rechercherAnnonces()">🔍</button>
             </div>
@@ -40,74 +100,120 @@
                 <button class="btn-primary" onclick="afficherDepotAnnonce()">Déposer une annonce</button>
             </div>
         </nav>
+        <div class="african-border-bottom"></div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section avec motifs africains -->
     <section class="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
-            <h2>Achetez et vendez facilement au Niger</h2>
-            <p>La plateforme de petites annonces qui connecte les Nigériens</p>
+            <h2>🌍 Connectons toute l'Afrique</h2>
+            <p>La plateforme de petites annonces qui unit les 54 pays africains</p>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">10,000+</span>
+                    <span class="stat-number">54</span>
+                    <span class="stat-label">Pays africains</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50,000+</span>
                     <span class="stat-label">Annonces actives</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">5,000+</span>
+                    <span class="stat-number">25,000+</span>
                     <span class="stat-label">Utilisateurs</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">8</span>
-                    <span class="stat-label">Régions couvertes</span>
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Villes couvertes</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-pattern"></div>
+    </section>
+
+    <!-- Régions africaines -->
+    <section class="regions">
+        <div class="container">
+            <h3>🗺️ Explorez l'Afrique par région</h3>
+            <div class="regions-grid">
+                <div class="region-card" onclick="filtrerRegion('nord')">
+                    <div class="region-icon">🏛️</div>
+                    <h4>Afrique du Nord</h4>
+                    <span>6 pays • 8,234 annonces</span>
+                    <div class="region-countries">Algérie, Égypte, Libye, Maroc, Soudan, Tunisie</div>
+                </div>
+                <div class="region-card" onclick="filtrerRegion('ouest')">
+                    <div class="region-icon">🌊</div>
+                    <h4>Afrique de l'Ouest</h4>
+                    <span>16 pays • 15,678 annonces</span>
+                    <div class="region-countries">Nigeria, Ghana, Sénégal, Mali, Burkina Faso...</div>
+                </div>
+                <div class="region-card" onclick="filtrerRegion('centrale')">
+                    <div class="region-icon">🌳</div>
+                    <h4>Afrique Centrale</h4>
+                    <span>8 pays • 6,543 annonces</span>
+                    <div class="region-countries">Cameroun, Congo RDC, Gabon, Tchad...</div>
+                </div>
+                <div class="region-card" onclick="filtrerRegion('est')">
+                    <div class="region-icon">🦁</div>
+                    <h4>Afrique de l'Est</h4>
+                    <span>18 pays • 12,987 annonces</span>
+                    <div class="region-countries">Kenya, Éthiopie, Tanzanie, Ouganda...</div>
+                </div>
+                <div class="region-card" onclick="filtrerRegion('australe')">
+                    <div class="region-icon">💎</div>
+                    <h4>Afrique Australe</h4>
+                    <span>6 pays • 9,876 annonces</span>
+                    <div class="region-countries">Afrique du Sud, Angola, Botswana...</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories -->
+    <!-- Categories avec motifs -->
     <section class="categories">
         <div class="container">
-            <h3>Parcourir par catégorie</h3>
+            <h3>🛍️ Parcourir par catégorie</h3>
             <div class="categories-grid">
                 <div class="category-card" onclick="filtrerCategorie('vehicules')">
                     <div class="category-icon">🚗</div>
                     <h4>Véhicules</h4>
-                    <span>1,234 annonces</span>
+                    <span>12,345 annonces</span>
                 </div>
                 <div class="category-card" onclick="filtrerCategorie('immobilier')">
                     <div class="category-icon">🏠</div>
                     <h4>Immobilier</h4>
-                    <span>856 annonces</span>
+                    <span>8,567 annonces</span>
                 </div>
                 <div class="category-card" onclick="filtrerCategorie('electronique')">
                     <div class="category-icon">📱</div>
                     <h4>Électronique</h4>
-                    <span>2,145 annonces</span>
+                    <span>21,456 annonces</span>
                 </div>
                 <div class="category-card" onclick="filtrerCategorie('mode')">
-                    <div class="category-icon">👕</div>
+                    <div class="category-icon">👗</div>
                     <h4>Mode & Beauté</h4>
-                    <span>987 annonces</span>
+                    <span>9,876 annonces</span>
                 </div>
                 <div class="category-card" onclick="filtrerCategorie('maison')">
                     <div class="category-icon">🛋️</div>
                     <h4>Maison & Jardin</h4>
-                    <span>654 annonces</span>
+                    <span>6,543 annonces</span>
                 </div>
                 <div class="category-card" onclick="filtrerCategorie('emploi')">
                     <div class="category-icon">💼</div>
                     <h4>Emploi & Services</h4>
-                    <span>432 annonces</span>
-                </div>
-                <div class="category-card" onclick="filtrerCategorie('loisirs')">
-                    <div class="category-icon">🎮</div>
-                    <h4>Loisirs & Hobbies</h4>
-                    <span>321 annonces</span>
+                    <span>4,321 annonces</span>
                 </div>
                 <div class="category-card" onclick="filtrerCategorie('agriculture')">
                     <div class="category-icon">🌾</div>
                     <h4>Agriculture</h4>
-                    <span>789 annonces</span>
+                    <span>7,890 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('artisanat')">
+                    <div class="category-icon">🎨</div>
+                    <h4>Artisanat Africain</h4>
+                    <span>3,456 annonces</span>
                 </div>
             </div>
         </div>
@@ -117,7 +223,7 @@
     <section class="recent-listings">
         <div class="container">
             <div class="section-header">
-                <h3>Annonces récentes</h3>
+                <h3>📢 Annonces récentes</h3>
                 <button class="btn-link" onclick="voirToutesAnnonces()">Voir toutes les annonces →</button>
             </div>
             
@@ -127,74 +233,90 @@
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- Features avec identité africaine -->
     <section class="features">
         <div class="container">
-            <h3>Pourquoi choisir NigerBonCoin ?</h3>
+            <h3>🌟 Pourquoi choisir AfricaBonCoin ?</h3>
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">🛡️</div>
                     <h4>Sécurisé</h4>
-                    <p>Transactions sécurisées et vérification des utilisateurs</p>
+                    <p>Transactions sécurisées et vérification des utilisateurs dans toute l'Afrique</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">📍</div>
-                    <h4>Local</h4>
-                    <p>Trouvez des produits près de chez vous dans tout le Niger</p>
+                    <div class="feature-icon">🌍</div>
+                    <h4>Pan-Africain</h4>
+                    <p>Connectez-vous avec 54 pays africains depuis une seule plateforme</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💬</div>
-                    <h4>Communication facile</h4>
-                    <p>Contactez directement les vendeurs via WhatsApp ou téléphone</p>
+                    <h4>Communication multilingue</h4>
+                    <p>Français, Anglais, Arabe, Swahili et langues locales supportées</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🆓</div>
-                    <h4>Gratuit</h4>
-                    <p>Déposez vos annonces gratuitement et sans limite</p>
+                    <div class="feature-icon">🤝</div>
+                    <h4>Commerce équitable</h4>
+                    <p>Promotion du commerce intra-africain et de l'économie locale</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h4>Mobile-first</h4>
+                    <p>Optimisé pour les smartphones, accessible partout en Afrique</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h4>Identité africaine</h4>
+                    <p>Design inspiré des motifs traditionnels africains</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer avec motifs africains -->
     <footer class="footer">
+        <div class="african-border-footer"></div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>🇳🇪 NigerBonCoin</h4>
-                    <p>La plateforme de petites annonces qui connecte les Nigériens</p>
+                    <h4>🌍 AfricaBonCoin</h4>
+                    <p>La plateforme qui connecte toute l'Afrique pour acheter et vendre facilement</p>
                     <div class="social-links">
                         <a href="#" class="social-link">Facebook</a>
                         <a href="#" class="social-link">WhatsApp</a>
                         <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
                     </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h5>Catégories</h5>
-                    <ul>
-                        <li><a href="#">Véhicules</a></li>
-                        <li><a href="#">Immobilier</a></li>
-                        <li><a href="#">Électronique</a></li>
-                        <li><a href="#">Mode & Beauté</a></li>
-                    </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h5>Régions</h5>
                     <ul>
-                        <li><a href="#">Niamey</a></li>
-                        <li><a href="#">Zinder</a></li>
-                        <li><a href="#">Maradi</a></li>
-                        <li><a href="#">Tahoua</a></li>
+                        <li><a href="#">Afrique du Nord</a></li>
+                        <li><a href="#">Afrique de l'Ouest</a></li>
+                        <li><a href="#">Afrique Centrale</a></li>
+                        <li><a href="#">Afrique de l'Est</a></li>
+                        <li><a href="#">Afrique Australe</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h5>Aide</h5>
+                    <h5>Pays populaires</h5>
+                    <ul>
+                        <li><a href="#">🇳🇬 Nigeria</a></li>
+                        <li><a href="#">🇿🇦 Afrique du Sud</a></li>
+                        <li><a href="#">🇪🇬 Égypte</a></li>
+                        <li><a href="#">🇰🇪 Kenya</a></li>
+                        <li><a href="#">🇲🇦 Maroc</a></li>
+                        <li><a href="#">🇬🇭 Ghana</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Aide & Support</h5>
                     <ul>
                         <li><a href="#">Comment ça marche</a></li>
                         <li><a href="#">Règles de sécurité</a></li>
+                        <li><a href="#">Support multilingue</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">FAQ</a></li>
                     </ul>
@@ -202,10 +324,11 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 NigerBonCoin. Tous droits réservés.</p>
+                <p>&copy; 2024 AfricaBonCoin. Unissons l'Afrique par le commerce. Tous droits réservés.</p>
                 <div class="footer-links">
                     <a href="#">Conditions d'utilisation</a>
                     <a href="#">Politique de confidentialité</a>
+                    <a href="#">Charte africaine</a>
                 </div>
             </div>
         </div>
@@ -215,7 +338,7 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fermerModal('loginModal')">&times;</span>
-            <h3>Se connecter</h3>
+            <h3>Se connecter à AfricaBonCoin</h3>
             <form class="login-form">
                 <input type="tel" placeholder="Numéro de téléphone" required>
                 <input type="password" placeholder="Mot de passe" required>
@@ -232,28 +355,24 @@
             <form class="ad-form">
                 <select required>
                     <option value="">Choisir une catégorie</option>
-                    <option value="vehicules">Véhicules</option>
-                    <option value="immobilier">Immobilier</option>
-                    <option value="electronique">Électronique</option>
-                    <option value="mode">Mode & Beauté</option>
-                    <option value="maison">Maison & Jardin</option>
-                    <option value="emploi">Emploi & Services</option>
-                    <option value="loisirs">Loisirs & Hobbies</option>
-                    <option value="agriculture">Agriculture</option>
+                    <option value="vehicules">🚗 Véhicules</option>
+                    <option value="immobilier">🏠 Immobilier</option>
+                    <option value="electronique">📱 Électronique</option>
+                    <option value="mode">👗 Mode & Beauté</option>
+                    <option value="maison">🛋️ Maison & Jardin</option>
+                    <option value="emploi">💼 Emploi & Services</option>
+                    <option value="agriculture">🌾 Agriculture</option>
+                    <option value="artisanat">🎨 Artisanat Africain</option>
                 </select>
                 <input type="text" placeholder="Titre de l'annonce" required>
                 <textarea placeholder="Description détaillée" rows="4" required></textarea>
-                <input type="number" placeholder="Prix (FCFA)" required>
-                <select required>
-                    <option value="">Région</option>
-                    <option value="niamey">Niamey</option>
-                    <option value="zinder">Zinder</option>
-                    <option value="maradi">Maradi</option>
-                    <option value="tahoua">Tahoua</option>
-                    <option value="agadez">Agadez</option>
-                    <option value="dosso">Dosso</option>
-                    <option value="tillaberi">Tillabéri</option>
-                    <option value="diffa">Diffa</option>
+                <input type="number" placeholder="Prix (devise locale)" required>
+                <select id="modalCountrySelect" required onchange="updateModalCities()">
+                    <option value="">Choisir un pays</option>
+                    <!-- Options générées par JavaScript -->
+                </select>
+                <select id="modalCitySelect" required>
+                    <option value="">Choisir une ville</option>
                 </select>
                 <input type="tel" placeholder="Numéro de téléphone" required>
                 <div class="file-upload">
