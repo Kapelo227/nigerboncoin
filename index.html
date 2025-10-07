@@ -268,6 +268,16 @@
                     <h4>Identité africaine</h4>
                     <p>Design inspiré des motifs traditionnels africains</p>
                 </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h4>Paiement à la livraison</h4>
+                    <p>Payez uniquement à la réception de votre commande. Sécurité garantie !</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h4>Livraison dans toute l'Afrique</h4>
+                    <p>Réseau de livraison couvrant les 54 pays africains</p>
+                </div>
             </div>
         </div>
     </section>
@@ -373,15 +383,20 @@
                 </select>
                 <select id="modalCitySelect" required>
                     <option value="">Choisir une ville</option>
-                </select>
-                <input type="tel" placeholder="Numéro de téléphone" required>
-                <div class="file-upload">
-                    <label for="photos">Ajouter des photos (max 5)</label>
-                    <input type="file" id="photos" multiple accept="image/*">
-                </div>
-                <button type="submit" class="btn-primary">Publier l'annonce</button>
-            </form>
-        </div>
+                                <input type="tel" id="modalPhone" placeholder="Numéro de téléphone" required>
+                        
+                        <label for="modalPhotos">Ajouter des photos (max 5)</label>
+                        <input type="file" id="modalPhotos" multiple accept="image/*" max="5">
+                        
+                        <div class="payment-info">
+                            <div class="payment-icon">💰</div>
+                            <div class="payment-text">
+                                <strong>Mode de paiement : À la livraison</strong>
+                                <p>L'acheteur paiera uniquement à la réception du produit. Sécurité garantie pour tous !</p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Publier l'annonce</button>    </div>
     </div>
 
     <script src="script.js"></script>

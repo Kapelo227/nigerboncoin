@@ -950,7 +950,42 @@ body {
     color: var(--primary-hover);
 }
 
-/* Responsive Design */
+/* Information de paiement */
+.payment-info {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fef7ed, #fed7aa);
+    border: 2px solid #fdba74;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.payment-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.payment-text {
+    flex: 1;
+}
+
+.payment-text strong {
+    color: #92400e;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.payment-text p {
+    color: #a16207;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;

@@ -771,11 +771,17 @@ function afficherDetailAnnonce(id) {
 👤 Vendeur: ${annonce.vendeur}
 📅 Publié: ${annonce.date}
 
+💳 PAIEMENT À LA LIVRAISON
+✅ Payez uniquement à la réception
+✅ Sécurité garantie pour l'acheteur
+✅ Pas de risque d'arnaque
+
 📞 Pour contacter le vendeur:
 • Appelez directement
 • Envoyez un message WhatsApp
 • Utilisez notre messagerie sécurisée
 
+🚚 Livraison disponible dans toute l'Afrique
 🌍 AfricaBonCoin - Connectons l'Afrique !
 
 Cette fonctionnalité sera bientôt disponible avec plus de détails et options de contact.
