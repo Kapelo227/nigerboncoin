@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NigerBonCoin - Petites Annonces au Niger</title>
+    <meta name="description" content="Le site de petites annonces numéro 1 au Niger. Achetez et vendez facilement près de chez vous.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo">🇳🇪 NigerBonCoin</h1>
+                <span class="tagline">Petites annonces au Niger</span>
+            </div>
+            
+            <div class="nav-search">
+                <input type="text" placeholder="Que recherchez-vous ?" class="search-input" id="searchInput">
+                <select class="location-select" id="locationSelect">
+                    <option value="">Toutes les régions</option>
+                    <option value="niamey">Niamey</option>
+                    <option value="zinder">Zinder</option>
+                    <option value="maradi">Maradi</option>
+                    <option value="tahoua">Tahoua</option>
+                    <option value="agadez">Agadez</option>
+                    <option value="dosso">Dosso</option>
+                    <option value="tillaberi">Tillabéri</option>
+                    <option value="diffa">Diffa</option>
+                </select>
+                <button class="search-btn" onclick="rechercherAnnonces()">🔍</button>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="afficherConnexion()">Se connecter</button>
+                <button class="btn-primary" onclick="afficherDepotAnnonce()">Déposer une annonce</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Achetez et vendez facilement au Niger</h2>
+            <p>La plateforme de petites annonces qui connecte les Nigériens</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10,000+</span>
+                    <span class="stat-label">Annonces actives</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5,000+</span>
+                    <span class="stat-label">Utilisateurs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Régions couvertes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h3>Parcourir par catégorie</h3>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filtrerCategorie('vehicules')">
+                    <div class="category-icon">🚗</div>
+                    <h4>Véhicules</h4>
+                    <span>1,234 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('immobilier')">
+                    <div class="category-icon">🏠</div>
+                    <h4>Immobilier</h4>
+                    <span>856 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('electronique')">
+                    <div class="category-icon">📱</div>
+                    <h4>Électronique</h4>
+                    <span>2,145 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('mode')">
+                    <div class="category-icon">👕</div>
+                    <h4>Mode & Beauté</h4>
+                    <span>987 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('maison')">
+                    <div class="category-icon">🛋️</div>
+                    <h4>Maison & Jardin</h4>
+                    <span>654 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('emploi')">
+                    <div class="category-icon">💼</div>
+                    <h4>Emploi & Services</h4>
+                    <span>432 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('loisirs')">
+                    <div class="category-icon">🎮</div>
+                    <h4>Loisirs & Hobbies</h4>
+                    <span>321 annonces</span>
+                </div>
+                <div class="category-card" onclick="filtrerCategorie('agriculture')">
+                    <div class="category-icon">🌾</div>
+                    <h4>Agriculture</h4>
+                    <span>789 annonces</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Listings -->
+    <section class="recent-listings">
+        <div class="container">
+            <div class="section-header">
+                <h3>Annonces récentes</h3>
+                <button class="btn-link" onclick="voirToutesAnnonces()">Voir toutes les annonces →</button>
+            </div>
+            
+            <div class="listings-grid" id="listingsGrid">
+                <!-- Les annonces seront générées par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h3>Pourquoi choisir NigerBonCoin ?</h3>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Sécurisé</h4>
+                    <p>Transactions sécurisées et vérification des utilisateurs</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h4>Local</h4>
+                    <p>Trouvez des produits près de chez vous dans tout le Niger</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💬</div>
+                    <h4>Communication facile</h4>
+                    <p>Contactez directement les vendeurs via WhatsApp ou téléphone</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🆓</div>
+                    <h4>Gratuit</h4>
+                    <p>Déposez vos annonces gratuitement et sans limite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🇳🇪 NigerBonCoin</h4>
+                    <p>La plateforme de petites annonces qui connecte les Nigériens</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Catégories</h5>
+                    <ul>
+                        <li><a href="#">Véhicules</a></li>
+                        <li><a href="#">Immobilier</a></li>
+                        <li><a href="#">Électronique</a></li>
+                        <li><a href="#">Mode & Beauté</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Régions</h5>
+                    <ul>
+                        <li><a href="#">Niamey</a></li>
+                        <li><a href="#">Zinder</a></li>
+                        <li><a href="#">Maradi</a></li>
+                        <li><a href="#">Tahoua</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Aide</h5>
+                    <ul>
+                        <li><a href="#">Comment ça marche</a></li>
+                        <li><a href="#">Règles de sécurité</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 NigerBonCoin. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fermerModal('loginModal')">&times;</span>
+            <h3>Se connecter</h3>
+            <form class="login-form">
+                <input type="tel" placeholder="Numéro de téléphone" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button type="submit" class="btn-primary">Se connecter</button>
+                <p>Pas encore de compte ? <a href="#" onclick="afficherInscription()">S'inscrire</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="adModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fermerModal('adModal')">&times;</span>
+            <h3>Déposer une annonce</h3>
+            <form class="ad-form">
+                <select required>
+                    <option value="">Choisir une catégorie</option>
+                    <option value="vehicules">Véhicules</option>
+                    <option value="immobilier">Immobilier</option>
+                    <option value="electronique">Électronique</option>
+                    <option value="mode">Mode & Beauté</option>
+                    <option value="maison">Maison & Jardin</option>
+                    <option value="emploi">Emploi & Services</option>
+                    <option value="loisirs">Loisirs & Hobbies</option>
+                    <option value="agriculture">Agriculture</option>
+                </select>
+                <input type="text" placeholder="Titre de l'annonce" required>
+                <textarea placeholder="Description détaillée" rows="4" required></textarea>
+                <input type="number" placeholder="Prix (FCFA)" required>
+                <select required>
+                    <option value="">Région</option>
+                    <option value="niamey">Niamey</option>
+                    <option value="zinder">Zinder</option>
+                    <option value="maradi">Maradi</option>
+                    <option value="tahoua">Tahoua</option>
+                    <option value="agadez">Agadez</option>
+                    <option value="dosso">Dosso</option>
+                    <option value="tillaberi">Tillabéri</option>
+                    <option value="diffa">Diffa</option>
+                </select>
+                <input type="tel" placeholder="Numéro de téléphone" required>
+                <div class="file-upload">
+                    <label for="photos">Ajouter des photos (max 5)</label>
+                    <input type="file" id="photos" multiple accept="image/*">
+                </div>
+                <button type="submit" class="btn-primary">Publier l'annonce</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
