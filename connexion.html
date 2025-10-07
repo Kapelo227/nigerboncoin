@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Connexion - AfricaBonCoin</title>
+    <link rel="stylesheet" href="auth-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Header avec retour -->
+        <div class="auth-header">
+            <a href="index.html" class="back-link">← Retour au site</a>
+            <div class="auth-logo">
+                <h1>🌍 AfricaBonCoin</h1>
+                <p>Connectez-vous à votre espace vendeur</p>
+            </div>
+        </div>
+
+        <!-- Formulaire de connexion -->
+        <div class="auth-form-container">
+            <div class="auth-form">
+                <div class="form-header">
+                    <h2>🔐 Connexion</h2>
+                    <p>Accédez à votre espace vendeur AfricaBonCoin</p>
+                </div>
+
+                <form id="connexionForm" onsubmit="return traiterConnexion(event)">
+                    <div class="form-group">
+                        <label for="emailConnexion">Adresse email</label>
+                        <input type="email" id="emailConnexion" name="email" required placeholder="votre@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motDePasseConnexion">Mot de passe</label>
+                        <div class="password-input">
+                            <input type="password" id="motDePasseConnexion" name="motDePasse" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('motDePasseConnexion')">
+                                👁️
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="resterConnecte" name="resterConnecte">
+                            <span class="checkmark"></span>
+                            Rester connecté
+                        </label>
+                        <a href="#" onclick="afficherMotDePasseOublie()" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary" id="btnConnexion">
+                            <span class="btn-text">🚀 Se connecter</span>
+                            <span class="btn-loading" style="display: none;">⏳ Connexion...</span>
+                        </button>
+                        
+                        <div class="form-links">
+                            <p>Pas encore de compte ? <a href="inscription.html">S'inscrire gratuitement</a></p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Connexion rapide (démo) -->
+                <div class="demo-section">
+                    <h3>🎯 Connexion rapide (Démo)</h3>
+                    <p>Testez la plateforme avec des comptes de démonstration :</p>
+                    
+                    <div class="demo-accounts">
+                        <button class="demo-btn" onclick="connexionDemo('particulier')">
+                            👤 Compte Particulier
+                            <small>mamadou@email.com</small>
+                        </button>
+                        <button class="demo-btn" onclick="connexionDemo('professionnel')">
+                            🏢 Compte Professionnel
+                            <small>aya.entreprise@email.com</small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistiques et confiance -->
+            <div class="auth-stats">
+                <h3>🌍 AfricaBonCoin en chiffres</h3>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-number">54</div>
+                        <div class="stat-label">Pays africains</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">25K+</div>
+                        <div class="stat-label">Vendeurs actifs</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Annonces publiées</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Visiteurs/mois</div>
+                    </div>
+                </div>
+
+                <div class="trust-indicators">
+                    <h4>🛡️ Sécurité garantie</h4>
+                    <ul>
+                        <li>✅ Paiement à la livraison</li>
+                        <li>✅ Vérification des vendeurs</li>
+                        <li>✅ Support client 24/7</li>
+                        <li>✅ Protection des données</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal mot de passe oublié -->
+    <div id="motDePasseOublieModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔑 Mot de passe oublié</h3>
+                <span class="close" onclick="fermerModal('motDePasseOublieModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Saisissez votre adresse email pour recevoir un lien de réinitialisation :</p>
+                <form id="motDePasseOublieForm" onsubmit="return envoyerResetMotDePasse(event)">
+                    <div class="form-group">
+                        <label for="emailReset">Adresse email</label>
+                        <input type="email" id="emailReset" name="email" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">📧 Envoyer le lien</button>
+                        <button type="button" class="btn-secondary" onclick="fermerModal('motDePasseOublieModal')">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de succès connexion -->
+    <div id="connexionSuccessModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>✅ Connexion réussie !</h3>
+            </div>
+            <div class="modal-body">
+                <div class="success-message">
+                    <div class="success-icon">🎉</div>
+                    <h4>Bienvenue sur votre espace vendeur !</h4>
+                    <p>Vous êtes maintenant connecté à AfricaBonCoin.</p>
+                    
+                    <div class="user-info" id="userInfo">
+                        <!-- Informations utilisateur générées par JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="allerVersTableauDeBord()">📊 Tableau de bord</button>
+                <button class="btn-secondary" onclick="allerVersAccueil()">🏠 Retour à l'accueil</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth-script.js"></script>
+</body>
+</html>
